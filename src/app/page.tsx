@@ -12,7 +12,7 @@ export default function Home() {
       <div className={styles.container}>
         <BubbleText chars={bubbleTextChars} />
         <p className={styles.subtitle}>
-          I'm a computer science student at the <a href="https://uwaterloo.ca/">University of Waterloo</a> and a software engineer based in Canada.
+          I&apos;m a computer science student at the <a href="https://uwaterloo.ca/">University of Waterloo</a> and a software engineer based in Canada.
         </p>
         <ExperienceSection />
       </div>
