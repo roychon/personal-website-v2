@@ -1,6 +1,4 @@
-import Image from "next/image";
 import styles from "./page.module.css";
-import Link from "next/link";
 import BubbleText from "@/shared/components/bubble-texts/component";
 import { bubbleTextChars } from "./constants";
 import ExperienceSection from "@/shared/components/experience-section/component";
