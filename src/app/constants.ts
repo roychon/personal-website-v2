@@ -1,0 +1,1 @@
+export const bubbleTextChars = ["H", "i", ",", " ", "I", "'", "m", " ", "R", "o","y","."]

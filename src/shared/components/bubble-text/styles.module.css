@@ -1,0 +1,35 @@
+.titleFont {
+  font-weight: 700;
+  font-size: 80px;
+  color: var(--foreground);
+}
+
+.squishText {
+  animation: squish 0.6s ease-out;
+  color: var(--link-hover);
+}
+
+@keyframes squish {
+  0% {
+    transform: scaleY(1);
+  }
+
+  80% {
+    transform: scaleY(0.8) scaleX(1.2);
+  }
+
+  90% {
+    transform: scaleY(1.2) scaleX(1);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .titleFont {
+    font-size: 36px;
+    justify-content: center;
+  }
+}

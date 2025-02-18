@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    display: flex;
+    justify-content: center;
+  }
+}
