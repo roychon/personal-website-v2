@@ -4,16 +4,16 @@ export default function ExperienceSection() {
   return (
     <>
       <div className={styles.experience}>
-        <p>currently, I'm:</p>
+        <p>currently, I&apos;m:</p>
         <ul>
           <li>
-            joining <a href="https://www.faire.com/en-ca/">Faire</a> this summer, where I'll be building marketplace features
+            joining <a href="https://www.faire.com/en-ca/">Faire</a> this summer, where I&apos;ll be building marketplace features
           </li>
           <li>seeking 2025 software engineering internships</li>
         </ul>
       </div>
       <div className={styles.experience}>
-        <p>previously, I've:</p>
+        <p>previously, I&apos;ve:</p>
         <ul>
           <li>
             built product features at <a href="https://www.vividseats.com/">Vivid Seats</a>, a leading online ticket marketplace
@@ -27,7 +27,7 @@ export default function ExperienceSection() {
         </ul>
       </div>
       <div className={styles.experience}>
-        <p>in my spare time, I'm:</p>
+        <p>in my spare time, I&apos;m:</p>
         <ul>
           <li>building machine learning models to beat online sportsbooks</li>
         </ul>
