@@ -7,7 +7,7 @@ export default function ExperienceSection() {
         <p>currently, I&apos;m:</p>
         <ul>
           <li>
-            joining <a href="https://www.faire.com/en-ca/">Faire</a> this summer, where I&apos;ll be building wholesale marketplace features
+            working at <a href="https://www.faire.com/en-ca/">Faire</a>, where I&apos;m building wholesale marketplace features
           </li>
           <li>seeking 2025 software engineering internships</li>
         </ul>
