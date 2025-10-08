@@ -7,7 +7,7 @@ export default function ExperienceSection() {
         <p>currently, I&apos;m:</p>
         <ul>
           <li>
-            joining the Coins team at <a href="https://www.bitgo.com/">Bitgo</a> this winter, working on crypto as a service
+            joining the Coins team at <a href="https://www.bitgo.com/">BitGo</a> this winter, working on crypto as a service
           </li>
           <li>seeking 2026 software engineering internships</li>
         </ul>
