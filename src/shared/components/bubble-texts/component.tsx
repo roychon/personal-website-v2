@@ -1,6 +1,18 @@
 import BubbleText from "../bubble-text/component";
-import { BubbleTextProps } from "./type";
+import type { BubbleTextProps } from "./type";
 
 export default function BubbleTexts({ chars }: BubbleTextProps) {
-  return <div style={{ display: "flex" }}>{chars && chars.map((c: string, index: number) => <BubbleText key={index} char={c} />)}</div>;
+  return (
+    <span
+      style={{
+        display: "inline-flex",
+        flexWrap: "wrap",
+        alignItems: "flex-end",
+      }}
+    >
+      {chars.map((c, index) => (
+        <BubbleText key={index} char={c} />
+      ))}
+    </span>
+  );
 }

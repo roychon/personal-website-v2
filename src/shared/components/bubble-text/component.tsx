@@ -1,22 +1,19 @@
 "use client";
+
 import { useState } from "react";
 import styles from "./styles.module.css";
-import { BubbleTextProp } from "./type";
+import type { BubbleTextProp } from "./type";
 
-export default function BubbleText({ char, key }: BubbleTextProp) {
+export default function BubbleText({ char }: BubbleTextProp) {
   const [isHovered, setIsHovered] = useState(false);
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleAnimationEnd = () => {
-    setIsHovered(false);
-  };
-
   return (
-    <p key={key} onMouseEnter={handleMouseEnter} onAnimationEnd={handleAnimationEnd} className={`${isHovered ? styles.squishText : ""} ${styles.titleFont} ${styles.gradientText}`}>
-      {char != " " ? char : "\u00A0"}
-    </p>
+    <span
+      onMouseEnter={() => setIsHovered(true)}
+      onAnimationEnd={() => setIsHovered(false)}
+      className={`${styles.titleFont} ${isHovered ? styles.squishText : ""}`}
+    >
+      {char !== " " ? char : "\u00A0"}
+    </span>
   );
 }

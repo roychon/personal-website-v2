@@ -1,20 +1,17 @@
 import type { Metadata } from "next";
-import { DM_Sans, Geist, Geist_Mono } from "next/font/google";
+import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const plexSans = IBM_Plex_Sans({
+  variable: "--font-plex-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const plexMono = IBM_Plex_Mono({
+  variable: "--font-plex-mono",
   subsets: ["latin"],
-});
-
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
-  subsets: ["latin"],
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
@@ -29,10 +26,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-      </head>
-      <body className={`${dmSans.variable} ${geistSans.variable} ${geistMono.variable}`}>{children}</body>
+      <body
+        className={`${plexSans.variable} ${plexMono.variable}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

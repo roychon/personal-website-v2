@@ -1,7 +1,12 @@
 .titleFont {
+  display: inline-block;
   font-weight: 700;
-  font-size: 80px;
+  font-size: clamp(2.25rem, 10vw, 5rem);
+  margin: 0;
+  line-height: 1;
   color: var(--foreground);
+  cursor: default;
+  user-select: none;
 }
 
 .squishText {
@@ -29,7 +34,6 @@
 
 @media screen and (max-width: 767px) {
   .titleFont {
-    font-size: 36px;
-    justify-content: center;
+    font-size: clamp(1.85rem, 9vw, 2.75rem);
   }
 }

@@ -1,14 +1,16 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --main: #888888;
-  --link-hover: #b3f5eb;
+  --background: #f7f5f2;
+  --foreground: #14120f;
+  --main: #5c5854;
+  --link-hover: #2f6f62;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0f0e0d;
+    --foreground: #ece8e3;
+    --main: #a8a29e;
+    --link-hover: #6ee7c5;
   }
 }
 
@@ -21,7 +23,6 @@ body {
 body {
   color: var(--main);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -43,10 +44,9 @@ a {
   }
 }
 
-/* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
-  a:hover {
+  body > * a:hover {
     color: var(--link-hover);
-    transition: 0.3s;
+    transition: color 0.2s ease;
   }
 }
