@@ -30,7 +30,7 @@ export default function Home() {
           Seeking 2026 SWE internships
         </p>
         <p className={styles.tagline}>
-          Computer science at the <a href="https://uwaterloo.ca/">University of Waterloo</a>, with interests in distributed systems and machine learning. Recently wrapped up my third year and I'm
+          Computer science at the <a href="https://uwaterloo.ca/">University of Waterloo</a>, with interests in distributed systems and machine learning. Recently wrapped up my third year and I&apos;m
           seeking software engineering internships for 2026.
         </p>
       </header>

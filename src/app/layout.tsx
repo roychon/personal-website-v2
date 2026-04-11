@@ -16,7 +16,7 @@ const plexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   title: "Roy Chon",
-  description: "Roy Chon's personal website",
+  description: "Roy Chon&apos;s personal website",
 };
 
 export default function RootLayout({
@@ -26,11 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${plexSans.variable} ${plexMono.variable}`}
-      >
-        {children}
-      </body>
+      <body className={`${plexSans.variable} ${plexMono.variable}`}>{children}</body>
     </html>
   );
 }
