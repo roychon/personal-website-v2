@@ -201,9 +201,9 @@
 .logo {
   width: 2.9rem;
   height: 2.9rem;
-  padding: 4px;
+  padding: var(--logo-pad);
   object-fit: contain;
-  background: #fff;
+  background: var(--logo-bg);
   border: 1px solid var(--border);
   border-radius: 12px;
 }

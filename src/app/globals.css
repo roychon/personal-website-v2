@@ -13,6 +13,8 @@
   --inv-link: #fdba74;
   --inv-underline: #78716c;
   --shadow: rgba(28, 25, 23, 0.3);
+  --logo-bg: #fff;
+  --logo-pad: 4px;
 }
 
 :root[data-theme="dark"] {
@@ -29,6 +31,7 @@
   --inv-link: #c2410c;
   --inv-underline: #a8a29e;
   --shadow: rgba(0, 0, 0, 0.6);
+  --logo-bg: #151210;
   color-scheme: dark;
 }
 
@@ -47,6 +50,7 @@
     --inv-link: #c2410c;
     --inv-underline: #a8a29e;
     --shadow: rgba(0, 0, 0, 0.6);
+    --logo-bg: #151210;
     color-scheme: dark;
   }
 }
