@@ -1,6 +1,3 @@
-/** Characters for the hover “bubble” title animation */
-export const nameBubbleChars = [..."Roy Chon"];
-
 export type WorkEntry = {
   org: string;
   orgUrl?: string;
@@ -23,7 +20,7 @@ export const workEntries: WorkEntry[] = [
     logoSrc: "/logos/amazon_web_services_logo.jpeg",
     period: "Spring 2026",
     title: "Software Development Engineer Intern",
-    detail: "Working on distributed systems at Amazon CloudWatch.",
+    detail: "AI agents for CloudWatch pipelines.",
   },
   {
     org: "BitGo",
@@ -31,7 +28,7 @@ export const workEntries: WorkEntry[] = [
     logoSrc: "/logos/bitgo_logo.png",
     period: "Winter 2026",
     title: "Software Engineering Intern",
-    detail: "Built identity verification workflows on the Crypto as a Service team.",
+    detail: "Identity verification workflows on the Crypto as a Service team.",
   },
   {
     org: "Faire",
@@ -39,7 +36,7 @@ export const workEntries: WorkEntry[] = [
     logoSrc: "/logos/faire_logo.png",
     period: "Spring 2025",
     title: "Software Engineering Intern",
-    detail: "Worked on growth at an online wholesale marketplace.",
+    detail: "Onboarding workflows on the retailer growth pod.",
   },
   {
     org: "Vivid Seats",
@@ -47,15 +44,7 @@ export const workEntries: WorkEntry[] = [
     logoSrc: "/logos/vivid_seats_logo.jpg",
     period: "Fall 2024",
     title: "Software Engineering Intern",
-    detail: "Re-engineered sports category pages and improved web speed.",
-  },
-  {
-    org: "WSIB",
-    orgUrl: "https://www.wsib.ca/en",
-    logoSrc: "/logos/wsib_logo.webp",
-    period: "Winter 2024",
-    title: "Full Stack Developer Intern",
-    detail: "Built internal tools with generative AI for a provincial workplace insurer.",
+    detail: "Sports category pages and web speed.",
   },
 ];
 

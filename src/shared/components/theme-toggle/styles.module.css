@@ -1,0 +1,22 @@
+.toggle {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0 14px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.toggle:hover {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+.toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}

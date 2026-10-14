@@ -1,0 +1,68 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Roy Chon — Name Treatments</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,100..900,0..100,0..1;1,9..144,100..900,0..100,0..1&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F4EFE7;--fg:#1C1917;--muted:#57534E;--card:#FBF8F3;--border:#E2D9CB;--accent:#C2410C;--green:#2F6F62;--serif:'Fraunces',Georgia,serif;--sans:'IBM Plex Sans',system-ui,sans-serif;--mono:'IBM Plex Mono',monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:32px 24px 64px}
+.opt{border-top:1px solid var(--border);padding:40px 0 56px}
+.lbl{font:500 .75rem var(--mono);color:var(--muted);margin-bottom:28px;display:flex;gap:12px;align-items:baseline}
+.lbl b{color:var(--accent)}
+.sub{color:var(--muted);max-width:30rem;margin-top:20px}
+a{color:inherit}a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.big{font-size:clamp(3.4rem,11vw,8rem);line-height:.95;letter-spacing:-.045em}
+
+/* 1 — one line, soft/wonky variable serif, italic accent */
+.o1 h1{font-family:var(--serif);font-weight:500;font-variation-settings:"opsz" 144,"SOFT" 100,"WONK" 1}
+.o1 em{font-style:italic;font-weight:300;color:var(--accent)}
+
+/* 2 — outlined Chon */
+.o2 h1{font-family:var(--serif);font-weight:800;font-variation-settings:"opsz" 144,"SOFT" 0;line-height:.85;text-transform:uppercase;letter-spacing:-.05em}
+.o2 h1 span{display:block}
+.o2 .out{color:transparent;-webkit-text-stroke:2px var(--fg)}
+
+/* 3 — Instrument Serif editorial + monogram stamp */
+.o3 .row{display:flex;align-items:center;gap:32px;flex-wrap:wrap}
+.o3 h1{font-family:'Instrument Serif',serif;font-weight:400;letter-spacing:-.03em}
+.o3 h1 i{color:var(--accent)}
+.stamp{width:104px;height:104px;border-radius:50%;background:var(--fg);color:var(--bg);display:grid;place-items:center;font:italic 400 2.4rem 'Instrument Serif',serif;position:relative;flex-shrink:0;transition:transform .5s}
+.stamp::after{content:"";position:absolute;inset:6px;border:1px dashed rgba(244,239,231,.5);border-radius:50%}
+.stamp:hover{transform:rotate(-12deg)}
+
+/* 4 — weight-shift on hover (variable axis) */
+.o4 h1{font-family:var(--serif);font-variation-settings:"opsz" 144,"SOFT" 100;display:flex;flex-wrap:wrap;gap:0 .25em;cursor:default}
+.o4 .ch{display:inline-block;font-weight:200;transition:font-weight .35s ease,color .35s ease,transform .35s ease}
+.o4 .ch:nth-child(odd){font-weight:700}
+.o4 h1:hover .ch{font-weight:700;color:var(--green)}
+.o4 h1 .ch:hover{font-weight:200;color:var(--accent);transform:translateY(-6px)}
+.o4 .w{display:inline-flex}
+.hint{font:400 .72rem var(--mono);color:var(--muted);margin-top:14px}
+
+/* 5 — marker highlight + role line */
+.o5 h1{font-family:var(--serif);font-weight:700;font-variation-settings:"opsz" 144,"SOFT" 50;letter-spacing:-.04em}
+.o5 mark{background:linear-gradient(transparent 58%,rgba(194,65,12,.28) 58% 92%,transparent 92%);color:inherit;padding:0 .06em}
+.o5 .role{font:400 .85rem var(--mono);color:var(--muted);margin-bottom:12px;display:flex;gap:10px;flex-wrap:wrap}
+.o5 .role span+span::before{content:"/";margin-right:10px;color:#a8a29e}
+
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head><body><div class="wrap">
+<p class="lbl"><b>Name treatments</b> same content, same palette as mock C — pick one</p>
+
+<section class="opt o1"><p class="lbl"><b>1</b> Soft serif, one line</p>
+ <h1 class="big">Roy <em>Chon</em></h1><p class="sub">Fraunces' soft + wonky axes give the letters a friendly, slightly hand-cut feel. Light italic surname in rust.</p></section>
+
+<section class="opt o2"><p class="lbl"><b>2</b> Poster / outlined</p>
+ <h1 class="big"><span>Roy</span><span class="out">Chon</span></h1><p class="sub">Heavy caps with a stroked surname. Loudest, most poster-like.</p></section>
+
+<section class="opt o3"><p class="lbl"><b>3</b> Editorial serif + monogram</p>
+ <div class="row"><div class="stamp" aria-hidden="true">RC</div><h1 class="big">Roy <i>Chon</i></h1></div><p class="sub">Instrument Serif is high-contrast and magazine-like; the stamp rotates on hover.</p></section>
+
+<section class="opt o4"><p class="lbl"><b>4</b> Variable weight, interactive</p>
+ <h1 class="big" aria-label="Roy Chon"><span class="w" aria-hidden="true"><span class="ch">R</span><span class="ch">o</span><span class="ch">y</span></span><span class="w" aria-hidden="true"><span class="ch">C</span><span class="ch">h</span><span class="ch">o</span><span class="ch">n</span></span></h1>
+ <p class="hint">hover the name — keeps the spirit of your current bubble-text hover effect</p></section>
+
+<section class="opt o5"><p class="lbl"><b>5</b> Marker highlight + role line</p>
+ <p class="role"><span>CS @ Waterloo</span><span>Canada</span></p>
+ <h1 class="big">Roy <mark>Chon</mark></h1><p class="sub">Bold serif with a hand-drawn highlighter swipe under the surname.</p></section>
+</div></body></html>

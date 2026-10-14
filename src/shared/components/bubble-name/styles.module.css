@@ -1,0 +1,40 @@
+.name {
+  display: inline-flex;
+  flex-wrap: wrap;
+  cursor: default;
+  user-select: none;
+}
+
+.letter {
+  display: inline-block;
+  transform-origin: 50% 85%;
+}
+
+.squish {
+  animation: squish 0.6s ease-out;
+  color: var(--accent);
+}
+
+@keyframes squish {
+  0% {
+    transform: scaleY(1);
+  }
+
+  80% {
+    transform: scaleY(0.8) scaleX(1.2);
+  }
+
+  90% {
+    transform: scaleY(1.2) scaleX(1);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .squish {
+    animation: none;
+  }
+}

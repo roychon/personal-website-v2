@@ -1,0 +1,64 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Roy Chon — Mock C: Editorial Bento</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..800,0..100&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F4EFE7;--fg:#1C1917;--muted:#57534E;--card:#FBF8F3;--border:#E2D9CB;--accent:#C2410C;--green:#2F6F62;--chip-on:#2F6F62;--inv-muted:#d6cfc4;--inv-green:#86d9c0;--inv-link:#fdba74;--inv-ul:#78716c;--shadow:rgba(28,25,23,.3);--serif:'Fraunces',Georgia,serif;--sans:'IBM Plex Sans',system-ui,sans-serif;--mono:'IBM Plex Mono',monospace}
+:root[data-theme=dark]{--bg:#151210;--fg:#F4EFE7;--muted:#A8A29E;--card:#1E1A17;--border:#352F29;--accent:#FB923C;--green:#5CC8AB;--chip-on:#2F6F62;--inv-muted:#57534E;--inv-green:#2F6F62;--inv-link:#C2410C;--inv-ul:#a8a29e;--shadow:rgba(0,0,0,.6);color-scheme:dark}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#151210;--fg:#F4EFE7;--muted:#A8A29E;--card:#1E1A17;--border:#352F29;--accent:#FB923C;--green:#5CC8AB;--chip-on:#2F6F62;--inv-muted:#57534E;--inv-green:#2F6F62;--inv-link:#C2410C;--inv-ul:#a8a29e;--shadow:rgba(0,0,0,.6);color-scheme:dark}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration-color:#a8a29e;text-underline-offset:3px;transition:color .2s,text-decoration-color .2s}
+a:hover{color:var(--accent);text-decoration-color:var(--accent)}
+a:focus-visible,.tgl:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:32px 24px 64px}
+.top{display:flex;align-items:center;justify-content:space-between;font:400 .8rem var(--mono);margin-bottom:56px}
+.top nav{display:flex;gap:20px;align-items:center}.tgl{font:inherit;color:inherit;background:none;border:1px solid var(--border);border-radius:999px;min-height:44px;min-width:44px;padding:0 14px;cursor:pointer;transition:background-color .2s,color .2s}.tgl:hover{background:var(--fg);color:var(--bg)}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:end;margin-bottom:56px}
+h1{font:700 clamp(3.4rem,10vw,7rem)/.95 var(--serif);font-variation-settings:"opsz" 144,"SOFT" 50;letter-spacing:-.04em}
+.role-line{font:400 .85rem var(--mono);color:var(--muted);margin-bottom:12px;display:flex;gap:10px;flex-wrap:wrap}
+.role-line span+span::before{content:"/";margin-right:10px;color:#a8a29e}
+.hero p{color:var(--muted);font-size:1.05rem}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{font:500 .8rem var(--mono);padding:0 16px;min-height:44px;display:inline-flex;align-items:center;border-radius:999px;border:1px solid var(--border);background:var(--card);text-decoration:none;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}.chip:hover{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.chip.on{background:var(--chip-on);color:#fff;border-color:var(--chip-on)}.chip.on:hover{background:var(--fg);border-color:var(--fg)}
+h2{font:600 1.6rem var(--serif);letter-spacing:-.02em;margin-bottom:20px;display:flex;align-items:baseline;gap:12px}
+h2 small{font:400 .75rem var(--mono);color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.c{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px;transition:transform .25s,box-shadow .25s,border-color .25s,background-color .25s,color .25s}
+.c:hover{transform:translateY(-3px);box-shadow:0 12px 28px -14px var(--shadow);border-color:#cfc3b0}
+.c.w3{grid-column:span 3}.c.w2{grid-column:span 2}
+.c:hover,.c:focus-within{background:var(--fg);color:var(--bg);border-color:var(--fg)}.c:hover .role,.c:hover .per,.c:focus-within .role,.c:focus-within .per{color:var(--inv-muted)}.c:hover .st,.c:focus-within .st{color:var(--inv-green)}.c:hover a,.c:focus-within a{text-decoration-color:var(--inv-ul)}.c:hover a:hover{color:var(--inv-link)}
+.c img{width:46px;height:46px;border-radius:12px;object-fit:contain;background:#fff;padding:4px;border:1px solid var(--border)}
+.hd{display:flex;justify-content:space-between;align-items:flex-start}
+.per{font:400 .75rem var(--mono);color:var(--muted)}
+.org{font:600 1.15rem var(--serif);margin-top:4px}
+.role{font-size:.88rem;color:var(--muted)}
+.det{font-size:.95rem}
+.projs{margin-top:56px}
+.c.p .pn{font:600 1.15rem var(--serif)}.c.p .st{font:400 .75rem var(--mono);color:var(--green)}
+footer{margin-top:56px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font:400 .78rem var(--mono);color:var(--muted);border-top:1px solid var(--border);padding-top:20px}
+footer div{display:flex;gap:16px}
+@media(max-width:820px){.hero{grid-template-columns:1fr;gap:24px}.c.w3,.c.w2{grid-column:span 6}.c.w2{grid-column:span 3}}
+@media(max-width:560px){.c.w2{grid-column:span 6}.top{margin-bottom:36px}}
+@media(prefers-reduced-motion:reduce){.c{transition:none}.c:hover{transform:none}}
+</style><script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script></head><body><div class="wrap">
+<div class="top"><span>Roy Chon — 2026</span><nav aria-label="Primary"><a href="https://www.linkedin.com/in/roychon/">resume</a><a href="https://github.com/roychon">source</a><button class="tgl" id="tgl" type="button" aria-label="Toggle light and dark theme">◐</button></nav></div>
+<header class="hero">
+ <div><p class="role-line"><span>CS @ Waterloo</span><span>Canada</span></p><h1>Roy Chon</h1></div>
+ <div><p>Computer science at the <a href="https://uwaterloo.ca/">University of Waterloo</a>, with interests in distributed systems and AI tooling. Seeking 2027 SWE internships.</p>
+ <div class="chips"><a class="chip on" href="mailto:rchon@uwaterloo.ca">Email ↗</a><a class="chip" href="https://github.com/roychon">GitHub ↗</a><a class="chip" href="https://www.linkedin.com/in/roychon/">LinkedIn ↗</a></div></div>
+</header>
+<section><h2>Experience <small>4 roles</small></h2>
+<div class="grid">
+ <article class="c w3"><div class="hd"><img src="../public/logos/amazon_web_services_logo.jpeg" alt=""><span class="per">Spring 2026</span></div><div><div class="org"><a href="https://aws.amazon.com/">Amazon Web Services (AWS)</a></div><p class="role">Software Development Engineer Intern</p></div><p class="det">AI agents for CloudWatch pipelines.</p></article>
+ <article class="c w3"><div class="hd"><img src="../public/logos/bitgo_logo.png" alt=""><span class="per">Winter 2026</span></div><div><div class="org"><a href="https://www.bitgo.com/">BitGo</a></div><p class="role">Software Engineering Intern</p></div><p class="det">Identity verification workflows on the Crypto as a Service team.</p></article>
+ <article class="c w3"><div class="hd"><img src="../public/logos/faire_logo.png" alt=""><span class="per">Spring 2025</span></div><div><div class="org"><a href="https://www.faire.com/">Faire</a></div><p class="role">Software Engineering Intern</p></div><p class="det">Onboarding workflows on the retailer growth pod.</p></article>
+ <article class="c w3"><div class="hd"><img src="../public/logos/vivid_seats_logo.jpg" alt=""><span class="per">Fall 2024</span></div><div><div class="org"><a href="https://www.vividseats.com/">Vivid Seats</a></div><p class="role">Software Engineering Intern</p></div><p class="det">Sports category pages and web speed.</p></article>
+</div></section>
+<section class="projs"><h2>Projects <small>2 entries</small></h2>
+<div class="grid">
+ <article class="c p w3"><span class="pn">Sports modeling experiments</span><span class="st">python, notebooks</span><p class="det">Personal ML projects aimed at modeling sports markets—mostly learning in public.</p></article>
+ <article class="c p w3"><span class="pn">More on GitHub</span><span class="st">various</span><p class="det">Smaller tools and coursework live in repos; start here for code.</p></article>
+</div></section>
+<footer><span>Last updated: April 2026</span><div><a href="https://github.com/roychon">github</a><a href="https://www.linkedin.com/in/roychon/">linkedin</a><a href="mailto:rchon@uwaterloo.ca">email</a></div><span>© Roy Chon, 2026</span></footer>
+</div><script>document.getElementById('tgl').onclick=function(){var d=document.documentElement,cur=d.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'),n=cur==='dark'?'light':'dark';d.dataset.theme=n;try{localStorage.setItem('theme',n)}catch(e){}}</script></body></html>
