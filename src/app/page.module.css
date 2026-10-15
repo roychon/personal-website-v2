@@ -148,6 +148,10 @@
   gap: 0.875rem;
 }
 
+.grid > .card:first-child:nth-last-child(odd) {
+  grid-column: 1 / -1;
+}
+
 .card {
   display: flex;
   flex-direction: column;

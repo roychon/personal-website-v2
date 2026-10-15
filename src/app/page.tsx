@@ -10,7 +10,9 @@ export default function Home() {
       <div className={styles.top}>
         <span>Roy Chon — 2026</span>
         <nav className={styles.topNav} aria-label="Primary">
-          <a href="https://www.linkedin.com/in/roychon/">resume</a>
+          <a href="/Roy_Chon_Resume.pdf" target="_blank" rel="noopener noreferrer">
+            resume
+          </a>
           <a href="https://github.com/roychon">source</a>
           <ThemeToggle />
         </nav>

@@ -15,6 +15,14 @@ export type ProjectEntry = {
 
 export const workEntries: WorkEntry[] = [
   {
+    org: "Databricks",
+    orgUrl: "https://www.databricks.com/",
+    logoSrc: "/logos/databricks_logo.png",
+    period: "Winter 2027",
+    title: "Software Engineering Intern",
+    detail: "Incoming winter 2027.",
+  },
+  {
     org: "Amazon Web Services (AWS)",
     orgUrl: "https://aws.amazon.com/",
     logoSrc: "/logos/amazon_web_services_logo.jpeg",
