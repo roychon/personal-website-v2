@@ -17,7 +17,7 @@ export const workEntries: WorkEntry[] = [
   {
     org: "Databricks",
     orgUrl: "https://www.databricks.com/",
-    logoSrc: "/logos/databricks_logo.png",
+    logoSrc: "/logos/databricks_logo.jpeg",
     period: "Winter 2027",
     title: "Software Engineering Intern",
     detail: "Incoming winter 2027.",
