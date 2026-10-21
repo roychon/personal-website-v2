@@ -5,7 +5,7 @@ import styles from "./styles.module.css";
 export default function ThemeToggle() {
   const toggle = () => {
     const root = document.documentElement;
-    const current = root.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    const current = root.dataset.theme === "dark" ? "dark" : "light";
     const next = current === "dark" ? "light" : "dark";
     root.dataset.theme = next;
     try {
